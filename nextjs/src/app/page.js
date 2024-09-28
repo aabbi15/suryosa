@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { LandingPageJs } from "../components/landing-page";
 import WhyUs from "@/components/why-us";
+import Solar3D from "@/components/solar3d";
+import MyDivider from "@/components/divider";
 
 export default function Home() {
   return (
@@ -12,6 +14,10 @@ export default function Home() {
     
    <LandingPageJs/>
    <WhyUs/>
+
+   <MyDivider/>
+   
+   <Solar3D/>
 
    </div>
    </>

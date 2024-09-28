@@ -19,7 +19,7 @@ export default function WhyUs() {
 
     useEffect(() => {
       const handleScroll = () => {
-        if (window.scrollY > 800) {  // Change this value to adjust when the navbar changes
+        if (window.scrollY > 300) {  // Change this value to adjust when the navbar changes
           setIsScrolled(true)
         } else {
           setIsScrolled(false)
@@ -66,18 +66,18 @@ export default function WhyUs() {
     <div className="flex items-center justify-center ">
 
 
-      <div className="  rounded-[20px] bg-contain shadow-lg py-10 w-[100%]  overflow-hidden bgblue-200"
+      <div className="  rounded-[20px] bg-slate-900 mx-[5%] shadow-lg py-10 w-[100%]  overflow-hidden bgblue-200"
 
         style={{
             // backgroundImage: `url('/bg3.jpg')`,
-            paddingLeft: '5%',
+            paddingLeft: '40px',
         }}
       >
-        <h1 className="text-2xl md:text-3xl font-bold  text-black text-left">Why Us?</h1>
+        <h1 className="text-2xl md:text-3xl font-bold  text-white text-left">Why Us?</h1>
 
         <div className='grid grid-cols-2 min-h-[600px] bgred-200'>
 
-            <div className="flex flex-col w-full justify-center items-start gap-10">
+            <div className="flex flex-col w-full text-center justify-center items-start gap-10">
 
           {cards.map((card, index) => (
             <div
@@ -101,12 +101,13 @@ export default function WhyUs() {
         
         {/* <div className='w-full h-full'> */}
 
-        <div className='rounded-l-[10px] transition-all duration-500 ease-in-out overflow-hidden flex items-center justify-center bg-cover  bg-center my-[10px]'
+        <div className='roundedl-[10px] border-white border transition-all duration-700 ease-in-out overflow-hidden flex items-center justify-center bg-cover  bg-center my-[10px]'
             style={{
                 backgroundImage: `${activeImage}`,
-                marginRight: ` ${!isScrolled ? "10%" : "0"}`,
-                borderTopRightRadius: `${!isScrolled ? "10px" : "0"}`,
-                borderBottomRightRadius: `${!isScrolled ? "10px" : "0"}`,
+                margin: ` ${!isScrolled ? "20%" : "5%"}`,
+                borderRadius: `${!isScrolled ? "50px" : "10px"}`,
+                // borderTopRightRadius: `${!isScrolled ? "10px" : "0"}`,
+                // borderBottomRightRadius: `${!isScrolled ? "10px" : "0"}`,
                 
             }}
         >
