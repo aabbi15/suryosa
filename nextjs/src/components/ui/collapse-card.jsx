@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 export default function CollapseCard({ title, description, isActive }) {
   return (
     <>
-      <div className={`relative rounded-xl card ${isActive ? "activecard" : ""}   `}>
-        <div className="header w-full">
+      <div className={`relative rounded-[6px] card ${isActive ? "activecard" : ""}   `}>
+        <div className="header w-full rounded-[6px]">
           <div className="img-box">
             
           </div>

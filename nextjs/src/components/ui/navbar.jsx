@@ -5,15 +5,15 @@ export default function MyNavbar({ current, isScrolled }) {
   current = 'Home';
   const links = [
     { name: 'Home', href: '#' },
-    { name: 'Solutions', href: '#' },
-    { name: 'Platform', href: '#' },
-    { name: 'Customers', href: '#' },
-    { name: 'Pricing', href: '#' },
-    { name: 'Explore', href: '#' },
+    { name: 'Commercial', href: '#' },
+    { name: 'Housing Society', href: '#' },
+    { name: 'Knowledge Center', href: '#' },
+    { name: 'Calculator', href: '#' },
+    { name: 'Blog', href: '#' },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-10`}>
+    <nav className={`bg-red300 fixed top-0 left-0 right-0 z-100`}>
       <div className="flex items-center mx-auto px-4 py-4 justify-around">
         {/* Logo */}
         {!isScrolled && <div className="text-2xl font-bold">suryosa</div>}

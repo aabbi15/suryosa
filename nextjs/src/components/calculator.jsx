@@ -1,9 +1,9 @@
 import { SolarBenefitsComponent } from "./solar-benefits";
 import Card3D from "./ui/3d-card";
 
-export default function Solar3D() {
+export default function Calculator() {
     return(
-        <div className=" rounded-[20px] bg1 bgslate-900 mx-[5%] shadow-lg py-10">
+        <div className=" rounded[20px] animatedbg bgslate-900 mx[5%] shadow-lg py-10">
         
         <div className="grid grid-cols-2">
             <div className="flex pl-[40px] flex-col items-center justify-center">

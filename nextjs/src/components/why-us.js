@@ -10,6 +10,8 @@ const cards = [
     { num:'2' ,title: 'Card 2', description: 'Description for Card 2' },
     { num:'3' , title: 'Card 3', description: 'Description for Card 3' },
     { num:'2' , title: 'Card 4', description: 'Description for Card 4' },
+    { num:'2' , title: 'Card 5', description: 'Description for Card 4' },
+
     
   ];
 
@@ -66,23 +68,25 @@ export default function WhyUs() {
     <div className="flex items-center justify-center ">
 
 
-      <div className="  rounded-[20px] bg-slate-900 mx-[5%] shadow-lg py-10 w-[100%]  overflow-hidden bgblue-200"
+      <div className="  rounded-[20px]   mx-[5%] shadowlg  w-[100%]  overflow-hidden bgblue-200"
 
         style={{
             // backgroundImage: `url('/bg3.jpg')`,
-            paddingLeft: '40px',
+            // paddingLeft: '40px',
         }}
       >
-        <h1 className="text-2xl md:text-3xl font-bold  text-white text-left">Why Us?</h1>
+        
 
-        <div className='grid grid-cols-2 min-h-[600px] bgred-200'>
+        <div className='grid grid-cols-2 min-h-[700px] bgred-200 gap-2'>
+        
 
-            <div className="flex flex-col w-full text-center justify-center items-start gap-10">
+            <div className="flex flex-col w-full text-center justify-center items-center gap-5  whyusbg rounded-xl">
+            <span className="text-2xl md:text-3xl font-bold  text-gray-800 ">Why Us?</span>
 
           {cards.map((card, index) => (
             <div
               key={index}
-              className={`flex justify-start items-start transition-all duration-700 ease-in-out ${
+              className={`flex justify-center items-center transition-all duration-700 ease-in-out ${
                 activeCard === index ? 'max-h-96' : 'max-h-20'
               } overflow-hidden relative w-full`}
               onClick={() => handleCardClick(index)}
@@ -101,11 +105,13 @@ export default function WhyUs() {
         
         {/* <div className='w-full h-full'> */}
 
-        <div className='roundedl-[10px] border-white border transition-all duration-700 ease-in-out overflow-hidden flex items-center justify-center bg-cover  bg-center my-[10px]'
+        <div className=' border-white border transition-all duration-700 ease-in-out overflow-hidden flex items-center justify-center bg-cover  bg-center '
             style={{
                 backgroundImage: `${activeImage}`,
-                margin: ` ${!isScrolled ? "20%" : "5%"}`,
-                borderRadius: `${!isScrolled ? "50px" : "10px"}`,
+                // marginLeft: ` ${!isScrolled ? "20%" : "5%"}`,
+                // width: `${!isScrolled ? "50%" : "95%"}`,
+                height: `${!isScrolled ? "50%" : "100%"}`,
+                borderRadius: `${!isScrolled ? "50px" : "12px"}`,
                 // borderTopRightRadius: `${!isScrolled ? "10px" : "0"}`,
                 // borderBottomRightRadius: `${!isScrolled ? "10px" : "0"}`,
                 
