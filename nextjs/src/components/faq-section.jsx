@@ -56,12 +56,12 @@ export function FaqSection() {
     faq.question.toLowerCase().includes(searchTerm.toLowerCase()))
 
   return (
-    (<div className="max-w-4xl mx-auto p-4 bg-white bg-opacity-80 shadow-xl rounded-xl myfont">
+    (<div className="max-w-4xl mx-auto p-4 bg-white bg-opacity-20 shadow-xl rounded-xl myfont">
       <div className="flex justify-center space-x-4 mb-6 ">
         {["All", "Solar: The Technology", "Suryosa"].map((tab) => (
           <button
             key={tab}
-            className={`px-4 py-2  ${activeTab === tab ? 'text-green-500 border-b-2 border-green-500' : 'text-gray-500'}`}
+            className={`px-4 py-2  ${activeTab === tab ? 'text-orange-500 border-b-2 border-orange-500' : 'text-gray-700'}`}
             onClick={() => setActiveTab(tab)}>
             {tab}
           </button>
@@ -71,11 +71,11 @@ export function FaqSection() {
         <input
           type="text"
           placeholder="Search"
-          className="w-full p-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="w-full p-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)} />
         <Search
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
       </div>
       <div className="space-y-4">
         {filteredFAQs.map((faq, index) => (
@@ -85,9 +85,9 @@ export function FaqSection() {
               onClick={() => setExpandedItem(expandedItem === index ? null : index)}>
               <span className="text-lg font-medium">{faq.question}</span>
               {expandedItem === index ? (
-                <ChevronUp className="text-green-500" />
+                <ChevronUp className="text-orange-500" />
               ) : (
-                <ChevronDown className="text-green-500" />
+                <ChevronDown className="text-orange-500" />
               )}
             </button>
             {expandedItem === index && (
