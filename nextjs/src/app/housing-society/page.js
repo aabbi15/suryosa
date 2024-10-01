@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { LandingPageJs } from "../components/landing-page";
+// import { LandingPageJs } from "../components/landing-page";
+
 import WhyUs from "@/components/why-us";
 import Solar3D from "@/components/solar3d";
 import MyDivider from "@/components/divider";
@@ -10,6 +11,8 @@ import MyMarquee from "@/components/marquee";
 import Marquee from "@/components/ui/marquee";
 import Testimonial from "@/components/testimonials";
 import MyVideo from "@/components/myvideo";
+import { CommercialPAgeJs } from "@/components/commercial-page";
+import { HousingSocietyPageJs } from "@/components/housing-society-page";
 
 export default function Home() {
   return (
@@ -19,7 +22,10 @@ export default function Home() {
 
 
     
-   <LandingPageJs/>
+   {/* <LandingPageJs/>
+    */}
+
+    <HousingSocietyPageJs/>
    <MyDivider/>
    <WhyUs/>
 

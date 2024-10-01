@@ -1,22 +1,49 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
+import { usePathname } from 'next/navigation'
+import Image from 'next/image'
+ 
 
-export default function MyNavbar({ current, isScrolled }) {
+export default function MyNavbar({ current, isScrolled2 }) {
 
-  current = 'Home';
+  const [isScrolled, setIsScrolled] = useState(false)
+  const mypath = usePathname()
+
+  console.log('mypath', mypath)
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {  // Change this value to adjust when the navbar changes
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [])
+
+
+  current = mypath.replace('/', '');
+
   const links = [
-    { name: 'Home', href: '#' },
-    { name: 'Commercial', href: '#' },
-    { name: 'Housing Society', href: '#' },
-    { name: 'Knowledge Center', href: '#' },
-    { name: 'Calculator', href: '#' },
-    { name: 'Blog', href: '#' },
+    { name: 'Home', href: '/' ,id:''},
+    { name: 'Commercial', href: '/commercial' ,id:'commercial'},
+    { name: 'Housing Society', href: '/housing-society',id:'housing-society' },
+    { name: 'Knowledge Center', href: '/knowledge-center',id:'knowledge-center' },
+    { name: 'Calculator', href: '/calculator' ,id:'calculator'},
+    { name: 'Blog', href: '/blog' ,id:'blog'},
   ];
 
   return (
-    <nav className={`bg-red300 fixed top-0 left-0 right-0 z-100`}>
-      <div className="flex items-center mx-auto px-4 py-4 justify-around">
+    <nav className={`bg-red300 fixed top-0 left-0 right-0 z-[1000000]`}>
+      <div className="flex items-center mx-auto px-4 py-4 justify-around text-white">
         {/* Logo */}
-        {!isScrolled && <div className="text-2xl font-bold">suryosa</div>}
+        {!isScrolled && <Image src="/fwdsuryosalogo/1.png" width={150} height={50} alt="Logo" />}
 
         {/* Navigation Links */}
         <div className="hidden md:block">
@@ -34,7 +61,7 @@ export default function MyNavbar({ current, isScrolled }) {
                     ? 'hover:bg-gray-200'
                     : 'hover:bg-gray-800'
                 } ${
-                  current === link.name ? 'underline underline-offset-4' : ''
+                  current === link.id ? 'underline underline-offset-4' : ''
                 }`}
               >
                 {link.name}

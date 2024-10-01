@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import { ChevronLeft, ChevronRight, Heart, Facebook, Twitter, Pinterest } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Heart, Facebook, X, ArrowLeftCircle } from 'lucide-react'
 
 const blogPost = {
   category: "General Residential",
@@ -30,18 +30,18 @@ const blogPost = {
 }
 
 const trendingPosts = [
-  { title: "Does your solar GUARANTEE power production and savings?", image: "/placeholder.svg" },
-  { title: "Latest Technology in Solar Panels in 2024", image: "/placeholder.svg" },
-  { title: "Survive the Storm: Why storm-proof rooftop solar matters for your family's safety", image: "/placeholder.svg" },
+  { title: "Does your solar GUARANTEE power production and savings?", image: "/placeholder2.svg" },
+  { title: "Latest Technology in Solar Panels in 2024", image: "/placeholder2.svg" },
+  { title: "Survive the Storm: Why storm-proof rooftop solar matters for your family's safety", image: "/placeholder2.svg" },
 ]
 
 const recentPosts = [
-  { title: "Does your solar GUARANTEE power production and savings?", image: "/placeholder.svg" },
-  { title: "Latest Technology in Solar Panels in 2024", image: "/placeholder.svg" },
-  { title: "Survive the Storm: Why storm-proof rooftop solar matters for your family's safety", image: "/placeholder.svg" },
+  { title: "Does your solar GUARANTEE power production and savings?", image: "/placeholder2.svg" },
+  { title: "Latest Technology in Solar Panels in 2024", image: "/placeholder2.svg" },
+  { title: "Survive the Storm: Why storm-proof rooftop solar matters for your family's safety", image: "/placeholder2.svg" },
 ]
 
-export function BlogPostComponent() {
+export default function Bloggy() {
   const [carouselIndex, setCarouselIndex] = useState(0)
 
   const nextSlide = () => {
@@ -54,15 +54,19 @@ export function BlogPostComponent() {
     )
   }
 
-  return (
-    (<div
+  return ((
+    <>
+            <div href="#" className="text-white flex p-2 rounded-xl px-4 bg-orange-500 hover:underline justify-center ml-20 w-32 gap-2"> <ArrowLeftCircle className=''/> Go Back</div> 
+
+    <div
       className="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="lg:w-2/3 lg:pr-8">
+        {/* <br/> <br/> */}
+      <div className="lg:w-2/3 lg:pr-8 lg:border-r ">
         <div className="text-sm text-orange-500 mb-2">{blogPost.category}</div>
         <h1 className="text-4xl font-bold mb-4">{blogPost.title}</h1>
         <div className="text-sm text-gray-500 mb-6">{blogPost.date}</div>
         <Image
-          src="/placeholder.svg"
+          src="/placeholder2.svg"
           alt="Solar panels"
           width={800}
           height={400}
@@ -88,14 +92,14 @@ export function BlogPostComponent() {
           </div>
           <div className="flex space-x-2">
             <Facebook className="text-blue-600" />
-            <Twitter className="text-blue-400" />
-            <Pinterest className="text-red-600" />
+            <X className="text-blue-400" />
+            {/* < className="text-red-600" /> */}
           </div>
         </div>
         <div className="border-t pt-8">
           <div className="flex items-center">
             <Image
-              src="/placeholder.svg"
+              src="/placeholder2.svg"
               alt="Previous post thumbnail"
               width={100}
               height={100}
@@ -107,7 +111,7 @@ export function BlogPostComponent() {
           </div>
         </div>
       </div>
-      <div className="lg:w-1/3 mt-12 lg:mt-0">
+      <div className="lg:w-1/3 mt-12 lg:mt-0 lg:pl-8">
         <div className="sticky top-8">
           <h2 className="text-2xl font-bold mb-6">TRENDING POSTS</h2>
           <div className="relative mb-8">
@@ -155,6 +159,8 @@ export function BlogPostComponent() {
           </div>
         </div>
       </div>
-    </div>)
+    </div>
+    
+    </>)
   );
 }

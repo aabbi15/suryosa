@@ -1,6 +1,25 @@
-export default function BlogCard({ title, description, image }) {
+'use client'
+
+import { motion } from "framer-motion";
+import { useRef } from "react";
+
+export default function BlogCard({ blogid }) {
+
+    const scrollRef = useRef(null)
+
     return(
-<section class="bg-white dark:bg-gray-900">
+<section class="bg-gray-200 transition-all   " ref={scrollRef} >
+     
+        < motion.div
+        
+        initial={{ opacity: 0 ,x:-1000 ,rotate:-20}}
+        whileInView={{ opacity: 1, x:0, rotate:0 }}
+        transition={{ ease: "easeIn", duration: 1.2, delay:0.3,type: "spring"}}
+        viewport={{ once: true }}
+
+        // viewport={{ root: scrollRef }}
+
+      >
     <div class="container px-6 py-10 mx-auto">
 
         <div class="mt-8 lg:-mx-6 lg:flex lg:items-center">
@@ -33,6 +52,7 @@ export default function BlogCard({ title, description, image }) {
             </div>
         </div>
     </div>
+    </motion.div>
 </section>
     )
     }

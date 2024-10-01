@@ -56,12 +56,12 @@ export function FaqSection() {
     faq.question.toLowerCase().includes(searchTerm.toLowerCase()))
 
   return (
-    (<div className="max-w-4xl mx-auto p-4">
-      <div className="flex justify-center space-x-4 mb-6">
+    (<div className="max-w-4xl mx-auto p-4 bg-white bg-opacity-80 shadow-xl rounded-xl myfont">
+      <div className="flex justify-center space-x-4 mb-6 ">
         {["All", "Solar: The Technology", "Suryosa"].map((tab) => (
           <button
             key={tab}
-            className={`px-4 py-2 ${activeTab === tab ? 'text-green-500 border-b-2 border-green-500' : 'text-gray-500'}`}
+            className={`px-4 py-2  ${activeTab === tab ? 'text-green-500 border-b-2 border-green-500' : 'text-gray-500'}`}
             onClick={() => setActiveTab(tab)}>
             {tab}
           </button>
@@ -79,9 +79,9 @@ export function FaqSection() {
       </div>
       <div className="space-y-4">
         {filteredFAQs.map((faq, index) => (
-          <div key={index} className="border-b border-gray-200 pb-4">
+          <div key={index} className=" border-b border-gray-200 pb-4">
             <button
-              className="flex justify-between items-center w-full text-left"
+              className="  flex justify-between items-center w-full text-left"
               onClick={() => setExpandedItem(expandedItem === index ? null : index)}>
               <span className="text-lg font-medium">{faq.question}</span>
               {expandedItem === index ? (
@@ -91,7 +91,7 @@ export function FaqSection() {
               )}
             </button>
             {expandedItem === index && (
-              <p className="mt-2 text-gray-600">{faq.answer}</p>
+              <p className="  mt-2 text-gray-700">{faq.answer}</p>
             )}
           </div>
         ))}

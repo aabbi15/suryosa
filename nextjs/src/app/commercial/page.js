@@ -1,5 +1,9 @@
+'use client'
+
+
 import Image from "next/image";
-import { LandingPageJs } from "../components/landing-page";
+// import { LandingPageJs } from "../components/landing-page";
+
 import WhyUs from "@/components/why-us";
 import Solar3D from "@/components/solar3d";
 import MyDivider from "@/components/divider";
@@ -10,6 +14,8 @@ import MyMarquee from "@/components/marquee";
 import Marquee from "@/components/ui/marquee";
 import Testimonial from "@/components/testimonials";
 import MyVideo from "@/components/myvideo";
+import { CommercialPAgeJs } from "@/components/commercial-page";
+import { CarouselComponent, CarouselWithContent } from "@/components/animated-text-carousel";
 
 export default function Home() {
   return (
@@ -19,9 +25,12 @@ export default function Home() {
 
 
     
-   <LandingPageJs/>
+   {/* <LandingPageJs/>
+    */}
+
+    <CommercialPAgeJs/>
    <MyDivider/>
-   <WhyUs/>
+   <CarouselWithContent/>
 
    <MyDivider/>
    <MyMarquee/>
@@ -39,8 +48,8 @@ export default function Home() {
 
    <MyDivider/>
 
-   <MyVideo/>
-   <MyDivider/>
+   {/* <MyVideo/>
+   <MyDivider/> */}
 
 
    </div>
