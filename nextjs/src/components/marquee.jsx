@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
+import Image from "next/image";
 
 const reviews = [
   {
@@ -40,6 +41,44 @@ const reviews = [
   },
 ];
 
+const images = [
+  {
+    name: "sponsor1",
+    src: "partner/1.svg"
+  },
+  {
+    name: "sponsor2",
+    src: "partner/2.svg"
+  },
+  {
+    name: "sponsor3",
+    src: "partner/3.svg"
+  },
+  {
+    name: "sponsor4",
+    src: "partner/4.svg"
+  },
+  {
+    name: "sponsor5",
+    src: "partner/5.svg"
+  },
+  {
+    name: "sponsor6",
+    src: "partner/6.svg"
+  },
+]
+
+
+const SponsorLogo = ({
+  name, src
+}) => {
+  return (
+    <div>
+      <Image src={src} width={300} height={200} alt={name} />
+    </div>
+  );
+};
+
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
@@ -73,19 +112,48 @@ const ReviewCard = ({
   );
 };
 
-export default function MyMarquee() {
-  return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden  ">
+// export default function MyMarquee() {
+//   return (
+//     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden  ">
 
+//         <div className="text-3xl font-bold text-center text-gray-900 mb-6 ">Our Partners</div>
+//       <Marquee pauseOnHover className="[--duration:20s]">
+//         {firstRow.map((review) => (
+//           <ReviewCard key={review.username} {...review} />
+//         ))}
+//       </Marquee>
+
+//       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-gray-200 "></div>
+//       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-gray-200 "></div>
+//     </div>
+//   );
+// }
+
+export default function MyMarquee2() {
+  return (
+    <div>
+
+      <div>
         <div className="text-3xl font-bold text-center text-gray-900 mb-6 ">Our Partners</div>
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-     
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-gray-200 "></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-gray-200 "></div>
+      </div>
+
+
+      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden   ">
+
+
+
+
+        <Marquee pauseOnHover className="[--duration:20s]">
+          {images.map((obj) => (
+            <SponsorLogo key={obj.name} {...obj} />
+          ))}
+        </Marquee>
+
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r from-gray-50 "></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l from-gray-50 "></div>
+      </div>
+
     </div>
   );
 }
+

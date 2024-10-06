@@ -3,8 +3,8 @@ import { Button } from "./ui/button";
 
 export default function MyVideo() {
   return (
-    <div className="h-full w-full">
-      <div className="grid mx-[5%] gap-5 h-[500px] w-full md:grid-cols-7 myfont">
+    <div className="">
+      <div className="grid mx-[5%] gap-5 h-[500px]  md:grid-cols-7 myfont">
         <div className="col-span-4 relative">
           {/* Video Background */}
           <video

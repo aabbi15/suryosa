@@ -10,18 +10,24 @@ import MyMarquee from "@/components/marquee";
 import Marquee from "@/components/ui/marquee";
 import Testimonial from "@/components/testimonials";
 import MyVideo from "@/components/myvideo";
+import { FloatingSidebarComponent } from "@/components/floating-sidebar";
+import { ContactFormComponent } from "@/components/contact-form";
+import { ComparisonSectionComponent } from "@/components/comparison-section";
+import { AnimatedStatsCardJs } from "@/components/animated-stats-card";
+import FocusText from "@/components/focus-text";
 
 export default function Home() {
   return (
    <>
 
-    <div className="bg-slate-200">
+    <div className="bg-gray-200">
 
 
-    
+    {/* <FloatingSidebarComponent/> */}
+    <ContactFormComponent/>
    <LandingPageJs/>
-   <MyDivider/>
-   <WhyUs/>
+   {/* <MyDivider/>
+   <WhyUs/> */}
 
    <MyDivider/>
    <MyMarquee/>
@@ -40,6 +46,15 @@ export default function Home() {
    <MyDivider/>
 
    <MyVideo/>
+   <MyDivider/>
+
+   <ComparisonSectionComponent/>
+   <MyDivider/>
+
+   <AnimatedStatsCardJs/>
+   <MyDivider/>
+
+   {/* <FocusText/> */}
    <MyDivider/>
 
 

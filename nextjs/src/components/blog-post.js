@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight, Heart, Facebook, X, ArrowLeftCircle } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 const blogPost = {
   category: "General Residential",
@@ -42,6 +43,8 @@ const recentPosts = [
 ]
 
 export default function Bloggy() {
+
+  const router = useRouter();
   const [carouselIndex, setCarouselIndex] = useState(0)
 
   const nextSlide = () => {
@@ -56,7 +59,7 @@ export default function Bloggy() {
 
   return ((
     <>
-            <div href="#" className="text-white flex p-2 rounded-xl px-4 bg-orange-500 hover:underline justify-center ml-20 w-32 gap-2"> <ArrowLeftCircle className=''/> Go Back</div> 
+            <button onClick={()=>router.back()} className="text-white flex p-2 rounded-xl px-4 bg-orange-500 hover:bg-orange-700 justify-center ml-20 w-32 gap-2"> <ArrowLeftCircle className=''/> Go Back</button> 
 
     <div
       className="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
