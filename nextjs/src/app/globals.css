@@ -645,14 +645,7 @@
 
 
 
-
-
-
-
-
 .neon-red {
-
- 
   --neon: #FF5161;
   --neon-glow: #D30302;
 }
@@ -677,9 +670,14 @@
   --neon-glow: #02c435;
 }
 
-.neon-yellow {
+/* .neon-yellow {
   --neon: #ffdb4e;
   --neon-glow: #b48505;
+} */
+
+.neon-black {
+  --neon: #080808;
+  --neon-glow: #000000;
 }
 
 .neon-white {
@@ -687,9 +685,7 @@
   --neon-glow: #ffffff;
 }
 
-.nred{
-  background-color: var(--neon-red);
-}
+
 
 @supports (background: color(display-p3 1 1 1)) {
   @media (dynamic-range: high) {
@@ -713,7 +709,7 @@
       --neon-glow: color(display-p3 0 1 0);
     }
 
-    .neon-yellow {
+    .neon-black {
       --neon-glow: color(display-p3 1 1 0);
     }
 
@@ -722,6 +718,12 @@
     }
   }
 }
+
+.neon-bg {
+  background-color: var(--neon);
+  box-shadow: 0 0 25px var(--neon-glow);
+}
+
 
 .ring2 {
   border: 5px solid var(--neon);
@@ -751,9 +753,4 @@
 .ring2::after {
   bottom: -75px;
 }
-
-
-
-
-
 

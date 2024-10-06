@@ -8,15 +8,19 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
-export function ContactFormComponent() {
-  const [isOpen, setIsOpen] = useState(false)
+export function ContactFormComponent({isOpen, setIsOpen}) {
+
+
+  // const [isOpen2, setIsOpen2] = useState(isOpen)
+  console.log(isOpen,'from child')
+
 
   const toggleForm = () => setIsOpen(!isOpen)
 
   return (<>
-    <Button onClick={toggleForm} className="fixed bottom-4 right-4">
+    {/* <Button onClick={toggleForm} className="fixed bottom-4 right-4">
       Contact Us
-    </Button>
+    </Button> */}
     <AnimatePresence>
       {isOpen && (
         <motion.div

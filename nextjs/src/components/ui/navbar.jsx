@@ -4,14 +4,21 @@ import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
+import { Contact } from 'lucide-react'
+import { ContactFormComponent } from '../contact-form'
  
 
 export default function MyNavbar({ current, isScrolled2 }) {
 
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+
   const mypath = usePathname()
 
   console.log('mypath', mypath)
+
+
+  console.log(isOpen,'from parent')
 
 
   useEffect(() => {
@@ -41,6 +48,8 @@ export default function MyNavbar({ current, isScrolled2 }) {
 
   return (
     <nav className={`bg-red300 fixed top-0 left-0 right-0 z-[1000000]`}>
+
+<ContactFormComponent isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className="flex items-center mx-auto px-4 py-4 justify-around text-white">
         {/* Logo */}
         {!isScrolled && <Image src="/fwdsuryosalogo/1.png" width={150} height={50} alt="Logo" />}
@@ -69,7 +78,9 @@ export default function MyNavbar({ current, isScrolled2 }) {
             ))}
 
             {isScrolled && (
-              <button className="transition-all duration-100 py-[3px] -my-2 px-3 rounded-full bg-orange-600 hover:bg-orange-700 text-white">
+              <button
+                onClick={() => setIsOpen(true)}
+               className="transition-all duration-100 py-[3px] -my-2 px-3 rounded-full bg-orange-600 hover:bg-orange-700 text-white">
                 Request a demo
               </button>
             )}
@@ -80,7 +91,9 @@ export default function MyNavbar({ current, isScrolled2 }) {
         {!isScrolled && (
           <div className="flex items-center space-x-4">
             {/* <Button variant="ghost" className="text-white">Log in</Button> */}
-            <Button variant="default" className="bg-orange-600 hover:bg-orange-700">
+            <Button 
+              onClick={() => setIsOpen(true)}
+            variant="default" className="bg-orange-600 hover:bg-orange-700">
               Request a demo
             </Button>
           </div>
