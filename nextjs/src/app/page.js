@@ -15,6 +15,9 @@ import { ContactFormComponent } from "@/components/contact-form";
 import { ComparisonSectionComponent } from "@/components/comparison-section";
 import { AnimatedStatsCardJs } from "@/components/animated-stats-card";
 import FocusText from "@/components/focus-text";
+import TestimonialSlider from "@/components/testimonial-slider";
+import { Star } from "lucide-react";
+import StarRating from "@/components/ui/star-rating";
 
 export default function Home() {
   return (
@@ -55,6 +58,9 @@ export default function Home() {
    <MyDivider/>
 
    {/* <FocusText/> */}
+
+   <TestimonialSlider/>
+   {/* <StarRating/> */}
    <MyDivider/>
 
 
