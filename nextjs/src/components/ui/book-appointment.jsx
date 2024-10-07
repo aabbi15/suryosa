@@ -57,7 +57,7 @@ export default function BookAppointment() {
                   />
                   <span className="absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white peer-checked:border-green-400"></span>
                   <label
-                    className={`flex h-full cursor-pointer flex-col rounded-lg p-4 shadow-lg rounded-full  peer-checked:bg-orange-600 peer-checked:text-white`}
+                    className={`flex h-full cursor-pointer flex-col rounded-xl p-4 shadow-lg peer-checked:bg-orange-600 peer-checked:text-white`}
                     htmlFor={`radio_${service.id}`}
                   >
                     <span className="font-medium">{service.name}</span>

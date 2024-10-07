@@ -47,7 +47,7 @@ export default function MyNavbar({ current, isScrolled2 }) {
   ];
 
   return (
-    <nav className={`bg-red300 fixed top-0 left-0 right-0 z-[1000000]`}>
+    <nav className={`bg-red300 fixed top-0 left-0 right-0 z-[1000000] text-md`}>
 
 <ContactFormComponent isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className="flex items-center mx-auto px-4 py-4 justify-around text-white">
@@ -57,7 +57,7 @@ export default function MyNavbar({ current, isScrolled2 }) {
         {/* Navigation Links */}
         <div className="hidden md:block">
           <div
-            className={`transition-all duration-700 rounded-full px-4 py-2 ${
+            className={`transition-all duration-700  rounded-full px-4 py-3 ${
               isScrolled ? 'bg-white text-gray-700' : 'bg-gray-800 bg-opacity-50'
             }`}
           >
@@ -80,7 +80,7 @@ export default function MyNavbar({ current, isScrolled2 }) {
             {isScrolled && (
               <button
                 onClick={() => setIsOpen(true)}
-               className="transition-all duration-100 py-[3px] -my-2 px-3 rounded-full bg-orange-600 hover:bg-orange-700 text-white">
+               className="transition-all duration-100 py-[6px] -my-2 px-3  rounded-full bg-orange-600 hover:bg-orange-700 text-white">
                 Request a demo
               </button>
             )}
