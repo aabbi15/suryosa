@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import BookAppointment from './ui/book-appointment'
 
 export function ContactFormComponent({isOpen, setIsOpen}) {
 
@@ -35,7 +36,10 @@ export function ContactFormComponent({isOpen, setIsOpen}) {
             aria-label="Close contact form">
             <X size={24} />
           </button>
-          <div className="mt-8">
+
+          {
+            true ? ( <BookAppointment/> ) : (
+              <div className="mt-8">
             <h2 className="text-3xl font-bold mb-2">Interested in solving your problems with Suryosa?</h2>
             <p className="text-gray-400 mb-6">One of our experts will get in touch as soon as possible.</p>
             <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
@@ -49,16 +53,7 @@ export function ContactFormComponent({isOpen, setIsOpen}) {
                 className="bg-zinc-800 border-zinc-700" />
               <Input type="email" placeholder="Email*" className="bg-zinc-800 border-zinc-700" />
               <div className="flex space-x-2">
-                {/* <Select>
-                  <SelectTrigger className="bg-zinc-800 border-zinc-700">
-                    <SelectValue placeholder="Country" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="india">India (भारत)</SelectItem>
-                    <SelectItem value="usa">United States</SelectItem>
-                    <SelectItem value="uk">United Kingdom</SelectItem>
-                  </SelectContent>
-                </Select> */}
+                
                 <Input type="tel" placeholder="Phone*" className="bg-zinc-800 border-zinc-700 w-full" />
               </div>
               <Textarea
@@ -74,7 +69,10 @@ export function ContactFormComponent({isOpen, setIsOpen}) {
             <p className="text-xs text-gray-400 mt-4">
               By submitting this form I agree that Suryosa may collect, process and retain my data pursuant to its Privacy Policy.
             </p>
-          </div>
+          </div>)
+
+          }
+          
         </motion.div>
       )}
     </AnimatePresence>
