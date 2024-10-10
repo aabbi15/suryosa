@@ -27,7 +27,7 @@ export function LandingPageJs() {
 
   return (
     (
-      <div className="min-h-screen  text-white">
+      <div className={`min-h-screen ${ isScrolled ? "" : ""} transition-all duration-700 text-white`}>
 
         {/* Navigation */}
         <MyNavbar isScrolled={isScrolled}/>
@@ -54,6 +54,8 @@ export function LandingPageJs() {
                   backgroundSize: "100% 100%",   // Fills the inner div
                   width: "90%",                // Set the size of the square background image
                   height: "90%",
+                  // width: "100%",
+                  // height: "100%",
                   borderRadius: "50px",
                 }
                 : {
@@ -66,7 +68,7 @@ export function LandingPageJs() {
 
           {/* Content Overlay */}
           <div className="absolute inset-0 flex items-center">
-            <div className="container mx-auto px-4">
+            <div className={`container mx-auto transition-all duration-700 ${isScrolled? "px-16 ": "px-4"} `} >
               <div className="max-w-3xl">
                 <div className="mb-6 space-x-4">
                   <Button variant="secondary" className="bg-gray-800 text-white hover:bg-gray-700">

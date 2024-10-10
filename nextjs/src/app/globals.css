@@ -754,3 +754,70 @@
   bottom: -75px;
 }
 
+
+
+.paragraph2 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 4vw;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70vh;
+}
+.background2 {
+  width: 100vw;
+  height: 100vh;
+  img {
+    /* // position: absolute; */
+    /* // top: 0; */
+    /* // bottom: 0; */
+    /* // left: 0; */
+    /* // right: 0; */
+    /* // background-size: cover; // this only works for images that are in brackground-image: url(url/to/image.jpg) */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* // z-index: -1; */
+  }
+}
+
+.line2 {
+  position: relative;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  --highlight-offset: 0%;
+
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) var(--highlight-offset),
+    rgba(255, 255, 255, 0.2) var(--highlight-offset)
+  );
+}
+.actual-section {
+  /* // background-color: orange; */
+  position: relative;
+  width: 100vw;
+  /* // height: 100vh; // The content should ditcate the height! */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: start;
+  justify-items: center;
+  > * {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}
+
+
+.dummy-section {
+  width: 100vw;
+  height: 100vh;
+  background-color: gray;
+}
+
+

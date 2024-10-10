@@ -18,6 +18,7 @@ import FocusText from "@/components/focus-text";
 import TestimonialSlider from "@/components/testimonial-slider";
 import { Star } from "lucide-react";
 import StarRating from "@/components/ui/star-rating";
+import MountainSection from "@/components/focus-text";
 
 export default function Home() {
   return (
@@ -60,8 +61,10 @@ export default function Home() {
    {/* <FocusText/> */}
 
    <TestimonialSlider/>
-   {/* <StarRating/> */}
+  
    <MyDivider/>
+
+   <MountainSection/>
 
 
    </div>
