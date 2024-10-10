@@ -68,7 +68,7 @@ export function LandingPageJs() {
 
           {/* Content Overlay */}
           <div className="absolute inset-0 flex items-center">
-            <div className={`container mx-auto transition-all duration-7s00 ${isScrolled? "px-16 ": "px-4"} `} >
+            <div className={`container mx-auto transition-all duration-700 ${isScrolled? "px-16 ": "px-4"} `} >
               <div className="max-w-3xl">
                 <div className="mb-6 space-x-4">
                   <Button variant="secondary" className="bg-gray-800 text-white hover:bg-gray-700">
