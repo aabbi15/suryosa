@@ -7,7 +7,7 @@ export default function Solar3D() {
         
         <div className="grid grid-cols-2">
             <div className="flex pl-[40px] flex-col items-center justify-center">
-                <h1 className="text-2xl md:text-3xl mb-10 font-bold  text-white self-start">Why Solar?</h1>
+                <h1 className="text-2xl md:text-5xl mb-10 font-bold  text-white title_underline self-start">Why Solar?</h1>
                 <SolarBenefitsComponent/>
             </div>
             <div className="flex items-center justify-center">

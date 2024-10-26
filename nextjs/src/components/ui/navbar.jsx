@@ -44,6 +44,7 @@ export default function MyNavbar({ current, isScrolled2 }) {
     { name: 'Knowledge Center', href: '/knowledge-center',id:'knowledge-center' },
     { name: 'Calculator', href: '/calculator' ,id:'calculator'},
     { name: 'Blog', href: '/blog' ,id:'blog'},
+    // { name: 'Comparison', href: '/blog' ,id:'Comparison'},
   ];
 
   return (

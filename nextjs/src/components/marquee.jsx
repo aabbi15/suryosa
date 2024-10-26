@@ -1,6 +1,43 @@
+'use client'
+
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 import Image from "next/image";
+
+// import "./mystyles.css"
+
+import { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
+
+
+
+  function Item() {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+      target: ref,
+      offset: ["end end", "start start"]
+    });
+  
+    return (
+      <section>
+        <div ref={ref}>
+          <figure className="progress">
+            <svg id="progress" width="75" height="75" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />
+              <motion.circle
+                cx="50"
+                cy="50"
+                r="30"
+                pathLength="1"
+                className="indicator"
+                style={{ pathLength: scrollYProgress }}
+              />
+            </svg>
+          </figure>
+        </div>
+      </section>
+    );
+  }
 
 const reviews = [
   {
@@ -112,36 +149,18 @@ const ReviewCard = ({
   );
 };
 
-// export default function MyMarquee() {
-//   return (
-//     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden  ">
-
-//         <div className="text-3xl font-bold text-center text-gray-900 mb-6 ">Our Partners</div>
-//       <Marquee pauseOnHover className="[--duration:20s]">
-//         {firstRow.map((review) => (
-//           <ReviewCard key={review.username} {...review} />
-//         ))}
-//       </Marquee>
-
-//       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-gray-200 "></div>
-//       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-gray-200 "></div>
-//     </div>
-//   );
-// }
-
 export default function MyMarquee2() {
   return (
     <div>
 
       <div>
-        <div className="text-3xl font-bold text-center text-gray-900 mb-6 ">Our Partners</div>
+        <div className="text-3xl font-bold text-center text-gray-900 mb-6 title_underline">Our Partners</div>
       </div>
 
 
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden   ">
 
-
-
+     
 
         <Marquee pauseOnHover className="[--duration:20s]">
           {images.map((obj) => (

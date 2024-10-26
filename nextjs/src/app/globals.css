@@ -821,3 +821,13 @@
 }
 
 
+.title_underline{
+
+  text-decoration: underline;
+  text-decoration-color: #fb8c00;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 0.2em;
+  text-decoration-style: solid;
+  /* text-decoration-skip-ink: var(--c3); */
+}
+
