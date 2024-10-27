@@ -70,11 +70,11 @@ export function LandingPageJs() {
           <div className="absolute inset-0 flex items-center">
             <div className={`container mx-auto transition-all duration-700 ${isScrolled? "px-16 ": "px-4"} `} >
               <div className="max-w-3xl">
-                <div className="mb-6 space-x-4">
-                  <Button variant="secondary" className="bg-gray-800 text-white hover:bg-gray-700">
+                <div className="mb-6 space-x-4 space-y-4  ">
+                  <Button variant="glass" className=" text-white bg-gray-500">
                     Letter from the CEO
                   </Button>
-                  <Button variant="secondary" className="bg-gray-800 text-white hover:bg-gray-700">
+                  <Button variant="primary" className=" text-white bg-orange-600">
                     Our Next Chapter
                   </Button>
                 </div>
@@ -84,13 +84,18 @@ export function LandingPageJs() {
                 <p className="text-xl mb-8 max-w-2xl">
                   The customer platform built to acquire, service and grow lifelong customers.
                 </p>
-                <div className="space-y-4 md:space-y-0 md:space-x-4">
+                <div className="space-y-4 flex md:flex-row flex-col items-center md:justify-start md:items-center  md:space-y-0 md:space-x-4">
+
+                  <div>
                   <Button variant="link" className="text-white hover:text-gray-100">
                     Discover the Planthouse <ChevronRight className="inline-block w-4 h-4" />
                   </Button>
+                  </div>
+                  <div>
                   <Button variant="default" className="bg-orange-600 hover:bg-orange-700">
                     Request a demo
                   </Button>
+                  </div>
                 </div>
               </div>
             </div>
