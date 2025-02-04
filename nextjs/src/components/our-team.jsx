@@ -58,7 +58,7 @@ export function OurTeamComponent() {
           {teamMembers.map((member, index) => (
             !member.featured ? (
               <div className='flex flex-col gap-4'>
-              <div key={index} className="bg-white flex justify-center items-center shadow-lg h-72 rounded-xl overflow-hidden">
+              <div key={member.name} className="bg-white flex justify-center items-center shadow-lg h-72 rounded-xl overflow-hidden">
                 <Image
                   className=" object-cover m-5"
                   src={member.image}
