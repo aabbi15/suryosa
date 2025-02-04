@@ -107,7 +107,7 @@ export function CareersPageComponent() {
             <p className="mb-4">
               We are a home-tech start-up, powered by a mix of Image Processing, VR, IOT and
               Data Analytics. We are solving energy issues of India by using un-utilised rooftops for
-              solar, and by providing sense and control of every appliance in one's house.
+              solar, and by providing sense and control of every appliance in one&apos;s house.
             </p>
             <Image
               src="/office.jpg"

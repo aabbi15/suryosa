@@ -12,7 +12,7 @@ export function ReferralSectionComponent() {
         <div className="w-full lg:w-1/2 space-y-6">
           <h2 className="text-4xl font-bold text-gray-900">Refer a friend, get $250</h2>
           <p className="text-lg text-gray-600">
-            Simply refer a realtor, developer or homeowner to our service and you'll earn $250 when they sign up for our renovation services. Not bad, eh?
+            Simply refer a realtor, developer or homeowner to our service and you&apos;ll earn $250 when they sign up for our renovation services. Not bad, eh?
           </p>
           <form className="space-y-4">
             <Input type="email" placeholder="Their Email" />
@@ -39,15 +39,15 @@ export function ReferralSectionComponent() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <h4 className="text-lg font-medium mb-2">How it works</h4>
-              <p className="text-gray-600">Our referral program is simple. Just provide your friend's details and your own. When they sign up, you'll receive $250 as a thank you from us.</p>
+              <p className="text-gray-600">Our referral program is simple. Just provide your friend&apos;s details and your own. When they sign up, you&apos;ll receive $250 as a thank you from us.</p>
             </div>
             <div>
               <h4 className="text-lg font-medium mb-2">Who can I refer?</h4>
-              <p className="text-gray-600">You can refer realtors, developers, or homeowners who might be interested in our renovation services. There's no limit to how many people you can refer!</p>
+              <p className="text-gray-600">You can refer realtors, developers, or homeowners who might be interested in our renovation services. There&apos;s no limit to how many people you can refer!</p>
             </div>
             <div>
               <h4 className="text-lg font-medium mb-2">When do I get paid?</h4>
-              <p className="text-gray-600">You'll receive your $250 reward once your referred friend signs up for our renovation services. The payment will be processed within 30 days of their signup.</p>
+              <p className="text-gray-600">You&apos;ll receive your $250 reward once your referred friend signs up for our renovation services. The payment will be processed within 30 days of their signup.</p>
             </div>
             <div>
               <h4 className="text-lg font-medium mb-2">Any restrictions?</h4>

@@ -29,7 +29,7 @@ export function OurTeamComponent() {
         <div className="space-y-12">
           {teamMembers.map((member, index) => (
             member.featured ? (
-              <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
+              <div key={member.name} className="bg-white shadow-lg rounded-lg overflow-hidden">
                 <div className="md:flex">
                   <div className="md:flex-shrink-0">
                     <Image
