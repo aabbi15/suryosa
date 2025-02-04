@@ -57,7 +57,7 @@ export function OurTeamComponent() {
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {teamMembers.map((member, index) => (
             !member.featured ? (
-              <div className='flex flex-col gap-4'>
+              <div key={member.name} className='flex flex-col gap-4'>
               <div key={member.name} className="bg-white flex justify-center items-center shadow-lg h-72 rounded-xl overflow-hidden">
                 <Image
                   className=" object-cover m-5"
