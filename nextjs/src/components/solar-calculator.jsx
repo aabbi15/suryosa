@@ -171,9 +171,13 @@ export function SolarCalculatorComponent() {
             <DialogTitle>Book Now</DialogTitle>
           </DialogHeader>
           <p>Proceed to site assessment?</p>
-          <Button onClick={() => window.location.href = '/site-assessment'}>
+          <a href='/site-assessment' className="">
+          
+          
+          <Button >
             Go to Site Assessment
           </Button>
+          </a>
         </DialogContent>
       </Dialog>
     </div>)

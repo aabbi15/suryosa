@@ -13,8 +13,12 @@ export const CardStack = ({
   const SCALE_FACTOR = scaleFactor || 0.06;
   const [cards, setCards] = useState(items);
 
+  const [w,setW] = useState();
+
   useEffect(() => {
     startFlipping();
+
+    setW(window.innerWidth >= 768 ? "55px" : "35px")
 
     return () => clearInterval(interval);
   }, []);
@@ -47,7 +51,7 @@ export const CardStack = ({
 
             <div className="text-2xl md:text-4xl  space-y-2  md:pr-32 md:pl-5 md:px-0 px-5 text-neutral-700 darky:text-neutral-200"
             style={{
-              lineHeight: window.innerWidth >= 768 ? "55px" : "35px",
+              lineHeight: w,
             }}>
               {card.content}
             </div>
