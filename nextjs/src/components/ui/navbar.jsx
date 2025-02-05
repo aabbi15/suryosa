@@ -51,10 +51,13 @@ export default function MyNavbar({ current, isScrolled2 }) {
     <nav className={`bg-red300 fixed top-0 left-0 right-0 z-[1000000] text-md`}>
 
 <ContactFormComponent isOpen={isOpen} setIsOpen={setIsOpen} />
+
+      
       <div className="flex items-center mx-auto px-4 py-4 justify-around text-white">
         {/* Logo */}
+        <a href='/'>
         {!isScrolled && <Image src="/fwdsuryosalogo/1.png" width={150} height={50} alt="Logo" />}
-
+        </a>
         {/* Navigation Links */}
         <div className="hidden md:block">
           <div
